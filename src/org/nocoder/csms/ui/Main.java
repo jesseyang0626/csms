@@ -1,12 +1,12 @@
-package org.nocoder.csmc.ui;
+package org.nocoder.csms.ui;
 
-import org.nocoder.csmc.controller.Controller;
+import org.nocoder.csms.controller.Controller;
 
 /**
  * 程序入口
  * 
- * @author Jason
- *
+ * @author Jason Yang
+ * 
  */
 public class Main {
 

@@ -1,4 +1,4 @@
-package org.nocoder.csmc.ui;
+package org.nocoder.csms.ui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import org.nocoder.csmc.controller.Controller;
+import org.nocoder.csms.controller.Controller;
 
 public class CsmsFrame extends JFrame {
 	private static final long serialVersionUID = 6892284721532573679L;

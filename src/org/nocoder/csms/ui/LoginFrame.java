@@ -1,4 +1,4 @@
-package org.nocoder.csmc.ui;
+package org.nocoder.csms.ui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -16,9 +16,13 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import org.nocoder.csmc.controller.Controller;
+import org.nocoder.csms.controller.Controller;
 
-/** 登录界面 是一个具体窗口框 */
+/** 
+ * 登录界面 是一个具体窗口框
+ * 
+ * @author Jason Yang
+ */
 public class LoginFrame extends JFrame {
 	private static final long serialVersionUID = -7993721800179709451L;
 
@@ -31,6 +35,7 @@ public class LoginFrame extends JFrame {
 		this.setTitle("登录系统");
 		JPanel contentPane = createContentPane();
 		this.setContentPane(contentPane);
+		this.setResizable(false);
 		setSize(270, 188);
 		setLocationRelativeTo(null);// 居中
 

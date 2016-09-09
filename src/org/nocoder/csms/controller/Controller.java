@@ -1,17 +1,17 @@
-package org.nocoder.csmc.controller;
+package org.nocoder.csms.controller;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import org.nocoder.csmc.ui.CsmsFrame;
-import org.nocoder.csmc.ui.LoginFrame;
-import org.nocoder.csmc.ui.PurchaseFrame;
-import org.nocoder.csmc.ui.SellFrame;
+import org.nocoder.csms.ui.CsmsFrame;
+import org.nocoder.csms.ui.LoginFrame;
+import org.nocoder.csms.ui.PurchaseFrame;
+import org.nocoder.csms.ui.SellFrame;
 
 /**
  * 客户端控制器
  * 
- * @author Jason
+ * @author Jason Yang
  *
  */
 public class Controller {

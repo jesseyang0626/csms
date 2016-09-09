@@ -1,4 +1,4 @@
-package org.nocoder.csmc.ui;
+package org.nocoder.csms.ui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
