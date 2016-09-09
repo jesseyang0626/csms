@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) {
 		// 客户端控制器
 		Controller controller = new Controller();
-		// jesse pull test
+		// jesse pull test agmin
 		// 登录界面
 		LoginFrame loginFrame = new LoginFrame();
 
