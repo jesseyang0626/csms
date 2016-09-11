@@ -9,19 +9,16 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.nocoder.csms.controller.Controller;
 
-public class CsmsFrame extends JFrame {
+public class CsmsFrame extends BaseJFrame {
 	private static final long serialVersionUID = 6892284721532573679L;
 
 	public CsmsFrame() {
 		this.setTitle("蓝氏服装销售管理系统");
-		this.setSize(780, 480);
-		this.setLocationRelativeTo(null);
 		this.setContentPane(this.createContentPane());
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		this.addWindowListener(new WindowAdapter() {

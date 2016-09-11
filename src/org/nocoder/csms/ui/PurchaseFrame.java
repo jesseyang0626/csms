@@ -3,19 +3,15 @@ package org.nocoder.csms.ui;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class PurchaseFrame extends JFrame {
+public class PurchaseFrame extends BaseJFrame {
 	private static final long serialVersionUID = -1456299737921732743L;
 
 	public PurchaseFrame() {
 		this.setTitle("进货管理");
-		this.setSize(780, 480);
-		this.setLocationRelativeTo(null);
-
 		this.setContentPane(createContentPane());
 	}
 
@@ -33,19 +29,19 @@ public class PurchaseFrame extends JFrame {
 
 	private JPanel createInputPane() {
 		JPanel p = new JPanel(new GridLayout(2, 2, 6, 6));
-		p.add(createIdPane());
-		p.add(createIdPane());
-		p.add(createIdPane());
-		p.add(createIdPane());
+		p.add(createBatchPanel());
+		p.add(createBatchPanel());
+		p.add(createBatchPanel());
+		p.add(createBatchPanel());
 		return p;
 	}
 
 	/**
 	 * 批次名称
 	 * 
-	 * @return
+	 * @return batchPanel
 	 */
-	private JPanel createIdPane() {
+	private JPanel createBatchPanel() {
 		JPanel p = new JPanel(new BorderLayout(6, 0));
 		p.add(BorderLayout.WEST, new JLabel("批次名称:"));
 		JTextField idField = new JTextField();

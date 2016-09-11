@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.util.Enumeration;
 
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -15,15 +14,12 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
-public class SellFrame extends JFrame {
+public class SellFrame extends BaseJFrame {
 
 	private static final long serialVersionUID = 7806680704413478071L;
 
 	public SellFrame() {
 		this.setTitle("销售管理");
-		this.setSize(780, 480);
-		this.setLocationRelativeTo(null);
-
 		this.setContentPane(createContentPane());
 	}
 
