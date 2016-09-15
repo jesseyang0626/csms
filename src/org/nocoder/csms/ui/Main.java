@@ -34,13 +34,9 @@ public class Main {
 		sellFrame.setClientUIController(clientUIController);
 		
 		clientUIController.setLoginFrame(loginFrame);
-		clientUIController.setCsmsFrame(mainFrame);
+		clientUIController.setMainFrame(mainFrame);
 		clientUIController.setSellFrame(sellFrame);
 		clientUIController.setPurchaseFrame(purchaseFrame);
-		
-
-		
-		
 		
 	}
 

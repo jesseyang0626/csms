@@ -73,14 +73,14 @@ public class MainFrame extends BaseJFrame {
 		purchase.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				controller.toPurchaseFrame();
+				controller.convertJFrame(controller.getMainFrame(), controller.getPurchaseFrame());
 			}
 		});
 
 		sell.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				controller.toSellFrame();
+				controller.convertJFrame(controller.getMainFrame(), controller.getSellFrame());
 			}
 		});
 

@@ -18,9 +18,8 @@ public class ClientUIController {
 
 	/**
 	 * 退出系统 控制逻辑
-	 * 
-	 * @param source
-	 *            代表从哪一个界面退出. 是一个窗口的引用
+	 * @param source 代表从哪一个界面退出. 是一个窗口的引用
+	 *  
 	 */
 	public void exit(JFrame frame) {
 		// Confirm 确认
@@ -32,26 +31,15 @@ public class ClientUIController {
 	}
 
 	public void login() {
-		convertJFrame(loginFrame, csmsFrame);
+		convertJFrame(loginFrame, mainFrame);
 	}
 
-	public void toPurchaseFrame() {
-		convertJFrame(csmsFrame, purchaseFrame);
-	}
-
-	public void toSellFrame() {
-		convertJFrame(csmsFrame, sellFrame);
-	}
-	
-	public void fromSellFrameToCsmsFrame(){
-		convertJFrame(sellFrame, csmsFrame);
-	}
-	
-	public void fromPurchaseFrameToCsmsFrame(){
-		convertJFrame(purchaseFrame, csmsFrame);
-	}
-	
-	private void convertJFrame(JFrame a, JFrame b){
+	/**
+	 * 界面切换
+	 * @param a 关闭原界面
+	 * @param b 打开目标界面
+	 */
+	public void convertJFrame(JFrame a, JFrame b){
 		a.setVisible(false);
 		b.setVisible(true);
 	}
@@ -59,7 +47,7 @@ public class ClientUIController {
 
 	private LoginFrame loginFrame;
 
-	private MainFrame csmsFrame;
+	private MainFrame mainFrame;
 
 	private PurchaseFrame purchaseFrame;
 
@@ -73,12 +61,22 @@ public class ClientUIController {
 		this.loginFrame = loginFrame;
 	}
 
-	public MainFrame getCsmsFrame() {
-		return csmsFrame;
+	
+
+	public MainFrame getMainFrame() {
+		return mainFrame;
 	}
 
-	public void setCsmsFrame(MainFrame csmsFrame) {
-		this.csmsFrame = csmsFrame;
+	public void setMainFrame(MainFrame mainFrame) {
+		this.mainFrame = mainFrame;
+	}
+
+	public PurchaseFrame getPurchaseFrame() {
+		return purchaseFrame;
+	}
+
+	public void setPurchaseFrame(PurchaseFrame purchaseFrame) {
+		this.purchaseFrame = purchaseFrame;
 	}
 
 	public SellFrame getSellFrame() {
@@ -89,12 +87,5 @@ public class ClientUIController {
 		this.sellFrame = sellFrame;
 	}
 
-	public PurchaseFrame getPurchaseFrame() {
-		return purchaseFrame;
-	}
-
-	public void setPurchaseFrame(PurchaseFrame purchaseFrame) {
-		this.purchaseFrame = purchaseFrame;
-	}
 
 }

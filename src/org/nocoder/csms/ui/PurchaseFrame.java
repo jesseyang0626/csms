@@ -30,7 +30,7 @@ public class PurchaseFrame extends BaseJFrame {
 		this.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				clientUIController.fromPurchaseFrameToCsmsFrame();
+				clientUIController.convertJFrame(clientUIController.getPurchaseFrame(), clientUIController.getMainFrame());
 			}
 
 		});
@@ -116,7 +116,7 @@ public class PurchaseFrame extends BaseJFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				clientUIController.fromPurchaseFrameToCsmsFrame();
+				clientUIController.convertJFrame(clientUIController.getPurchaseFrame(), clientUIController.getMainFrame());
 				
 			}
 		});
