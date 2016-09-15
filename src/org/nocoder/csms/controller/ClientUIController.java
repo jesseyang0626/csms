@@ -3,7 +3,7 @@ package org.nocoder.csms.controller;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import org.nocoder.csms.ui.CsmsFrame;
+import org.nocoder.csms.ui.MainFrame;
 import org.nocoder.csms.ui.LoginFrame;
 import org.nocoder.csms.ui.PurchaseFrame;
 import org.nocoder.csms.ui.SellFrame;
@@ -14,7 +14,7 @@ import org.nocoder.csms.ui.SellFrame;
  * @author Jason Yang
  *
  */
-public class Controller {
+public class ClientUIController {
 
 	/**
 	 * 退出系统 控制逻辑
@@ -32,23 +32,34 @@ public class Controller {
 	}
 
 	public void login() {
-		this.loginFrame.setVisible(false);
-		this.csmsFrame.setVisible(true);
+		convertJFrame(loginFrame, csmsFrame);
 	}
 
 	public void toPurchaseFrame() {
-		this.csmsFrame.setVisible(false);
-		this.purchaseFrame.setVisible(true);
+		convertJFrame(csmsFrame, purchaseFrame);
 	}
 
 	public void toSellFrame() {
-		this.csmsFrame.setVisible(false);
-		this.sellFrame.setVisible(true);
+		convertJFrame(csmsFrame, sellFrame);
 	}
+	
+	public void fromSellFrameToCsmsFrame(){
+		convertJFrame(sellFrame, csmsFrame);
+	}
+	
+	public void fromPurchaseFrameToCsmsFrame(){
+		convertJFrame(purchaseFrame, csmsFrame);
+	}
+	
+	private void convertJFrame(JFrame a, JFrame b){
+		a.setVisible(false);
+		b.setVisible(true);
+	}
+	
 
 	private LoginFrame loginFrame;
 
-	private CsmsFrame csmsFrame;
+	private MainFrame csmsFrame;
 
 	private PurchaseFrame purchaseFrame;
 
@@ -62,11 +73,11 @@ public class Controller {
 		this.loginFrame = loginFrame;
 	}
 
-	public CsmsFrame getCsmsFrame() {
+	public MainFrame getCsmsFrame() {
 		return csmsFrame;
 	}
 
-	public void setCsmsFrame(CsmsFrame csmsFrame) {
+	public void setCsmsFrame(MainFrame csmsFrame) {
 		this.csmsFrame = csmsFrame;
 	}
 

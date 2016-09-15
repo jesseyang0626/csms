@@ -2,6 +2,8 @@ package org.nocoder.csms.ui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Enumeration;
 
 import javax.swing.JLabel;
@@ -14,6 +16,8 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
+import org.nocoder.csms.controller.ClientUIController;
+
 public class SellFrame extends BaseJFrame {
 
 	private static final long serialVersionUID = 7806680704413478071L;
@@ -21,6 +25,15 @@ public class SellFrame extends BaseJFrame {
 	public SellFrame() {
 		this.setTitle("销售管理");
 		this.setContentPane(createContentPane());
+		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				clientUIController.fromSellFrameToCsmsFrame();
+			}
+
+		});
+		
 	}
 
 	private JPanel createContentPane() {
@@ -165,5 +178,12 @@ public class SellFrame extends BaseJFrame {
 		tablePane.add(table);
 		return tablePane;
 	}
+	
+	private ClientUIController clientUIController;
+
+	public void setClientUIController(ClientUIController clientUIController) {
+		this.clientUIController = clientUIController;
+	}
+	
 
 }

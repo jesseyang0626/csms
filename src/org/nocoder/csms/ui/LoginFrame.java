@@ -16,7 +16,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import org.nocoder.csms.controller.Controller;
+import org.nocoder.csms.controller.ClientUIController;
 
 /** 
  * 登录界面 是一个具体窗口框
@@ -125,9 +125,9 @@ public class LoginFrame extends JFrame {
 		return p;
 	}
 
-	private Controller controller;
+	private ClientUIController controller;
 
-	public void setController(Controller controller) {
+	public void setClientUIController(ClientUIController controller) {
 		this.controller = controller;
 	}
 

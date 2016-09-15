@@ -12,19 +12,19 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import org.nocoder.csms.controller.Controller;
+import org.nocoder.csms.controller.ClientUIController;
 
-public class CsmsFrame extends BaseJFrame {
+public class MainFrame extends BaseJFrame {
 	private static final long serialVersionUID = 6892284721532573679L;
 
-	public CsmsFrame() {
+	public MainFrame() {
 		this.setTitle("蓝氏服装销售管理系统");
 		this.setContentPane(this.createContentPane());
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		this.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				controller.exit(CsmsFrame.this);
+				controller.exit(MainFrame.this);
 			}
 
 		});
@@ -87,7 +87,7 @@ public class CsmsFrame extends BaseJFrame {
 		exit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				controller.exit(CsmsFrame.this);
+				controller.exit(MainFrame.this);
 			}
 		});
 
@@ -114,13 +114,13 @@ public class CsmsFrame extends BaseJFrame {
 		info.setText(" 您好!");
 	}
 
-	private Controller controller;
+	private ClientUIController controller;
 
-	public Controller getController() {
+	public ClientUIController getController() {
 		return controller;
 	}
 
-	public void setController(Controller controller) {
+	public void setClientUIController(ClientUIController controller) {
 		this.controller = controller;
 	}
 
