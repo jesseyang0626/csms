@@ -9,7 +9,11 @@ import java.util.List;
 
 import org.nocoder.csms.entity.Purchase;
 import org.nocoder.csms.util.DBUtil;
-
+/**
+ * 进货记录数据库访问对象
+ * @author yangjinlong
+ *
+ */
 public class PurchaseDao {
 	public Purchase selectPurchaseById(String id){
 		Connection conn = DBUtil.getConnection();

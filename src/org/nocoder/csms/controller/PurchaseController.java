@@ -3,7 +3,11 @@ package org.nocoder.csms.controller;
 import org.nocoder.csms.entity.Purchase;
 import org.nocoder.csms.service.PurchaseService;
 import org.nocoder.csms.service.impl.PurchaseServiceImpl;
-
+/**
+ * 进货记录controller
+ * @author yangjinlong
+ *
+ */
 public class PurchaseController {
 	private PurchaseService service = new PurchaseServiceImpl();
 	

@@ -9,7 +9,7 @@ import org.nocoder.csms.ui.PurchaseFrame;
 import org.nocoder.csms.ui.SellFrame;
 
 /**
- * 客户端控制器
+ * 客户端界面控制器
  * 
  * @author Jason Yang
  *

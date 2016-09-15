@@ -3,7 +3,11 @@ package org.nocoder.csms.service;
 import java.util.List;
 
 import org.nocoder.csms.entity.Purchase;
-
+/**
+ * 进货记录ervice
+ * @author yangjinlong
+ *
+ */
 public interface PurchaseService {
 
 	public Purchase getPurchaseById(String id);

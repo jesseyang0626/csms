@@ -1,7 +1,11 @@
 package org.nocoder.csms.entity;
 
 import java.sql.Date;
-
+/**
+ * 进货记录详情实体类
+ * @author yangjinlong
+ *
+ */
 public class PurchaseDetail {
 	private String id;
 	private String purchaseId;
