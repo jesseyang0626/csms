@@ -2,6 +2,7 @@ package org.nocoder.csms.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 /**
  * 数据库操作工具类
@@ -34,6 +35,16 @@ public class DBUtil {
 		if(conn != null){
 			try {
 				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void closePreparedStatement(PreparedStatement ps){
+		if(ps != null){
+			try {
+				ps.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

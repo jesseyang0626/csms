@@ -67,12 +67,13 @@ public class PurchaseDao {
 	
 	public int insertPurchase(Purchase purchase){
 		Connection conn = DBUtil.getConnection();
+		PreparedStatement ps = null;
 		String sql = "INSERT INTO PURCHASE ("
 				+ "ID, BATCH_NAME , TOTAL_COST , EXPRESS_COST , CREATE_DATE , REMARK "
 				+ ") VALUES (?, ?, ?, ?, ?, ?)";
 		int res = 0;
 		try {
-			PreparedStatement ps = conn.prepareStatement(sql);
+			ps = conn.prepareStatement(sql);
 			ps.setString(1, purchase.getId());
 			ps.setString(2, purchase.getBatchName());
 			ps.setDouble(3, purchase.getTotalCost());
@@ -82,8 +83,10 @@ public class PurchaseDao {
 			res = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally{
+			DBUtil.closePreparedStatement(ps);
+			DBUtil.closeConnection(conn);
 		}
-		DBUtil.closeConnection(conn);
 		if(res>0){
 			System.out.println("添加进货记录成功");
 		}
